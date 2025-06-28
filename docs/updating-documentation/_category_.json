@@ -1,0 +1,8 @@
+{
+  "label": "Updating This Site",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how to use Docusaurus to update this site."
+  }
+}

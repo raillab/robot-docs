@@ -1,0 +1,8 @@
+{
+  "label": "BlueROV2",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about the BlueROV2 robot."
+  }
+}

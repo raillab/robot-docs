@@ -1,41 +1,48 @@
-# Website
+# RAIL Lab Robot Documentation Site
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This repository contains the documentation for the robots in **The RAIL Lab**.
+It is built using [Docusaurus](https://docusaurus.io/) and is hosted on GitHub Pages.
 
-## Installation
+## 🛠 Getting Started
 
+### 1. Install Prerequisites
+Ensure you have **Node.js (v18 or later)** and **npm** installed.
+You can install them from [nodejs.org](https://nodejs.org/).
+
+### 2. Clone the Repository
 ```bash
-yarn
+git clone https://github.com/raillab/rail-lab-robots.git
+cd rail-lab-robots
 ```
 
-## Local Development
-
+### 3. Install Dependencies
 ```bash
-yarn start
+npm install
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
+### 4. Run Locally
+To preview the documentation locally:
 ```bash
-yarn build
+npm run start
 ```
+Then visit `http://localhost:3000` in your browser.
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+### 5. Make Changes
+- All documentation is written in Markdown and lives in the `docs/` folder.
+- Each robot has its own folder inside `docs/robots/`
+- After editing, commit your changes and push to GitHub.
 
-## Deployment
+### 6. Deployment
+When changes are pushed to the `main` branch, the site is automatically deployed to GitHub Pages via GitHub Actions.
 
-Using SSH:
+---
 
-```bash
-USE_SSH=true yarn deploy
-```
+## 🧩 Contributing
+If you notice something missing or want to contribute:
+- Add new Markdown files or edit existing ones
+- Use simple headings and code blocks when needed
+- Follow the folder structure for consistency
 
-Not using SSH:
+For larger changes, create a GitHub issue or pull request first.
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Thank you for helping document The RAIL Lab robots!
