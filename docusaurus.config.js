@@ -4,15 +4,16 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
+const path = require("path");
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'RAIL Lab Robots',
-  tagline: 'Robots of the RAIL Lab',
-  favicon: 'img/RAIL_Lab_icon.ico',
+  title: "RAIL Lab Robots",
+  tagline: "Robots of the RAIL Lab",
+  favicon: "img/RAIL_Lab_icon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -20,58 +21,58 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://raillab.github.io',
+  url: "https://raillab.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/robot-docs/',
+  baseUrl: "/robot-docs/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'raillab', // Usually your GitHub org/user name.
-  projectName: 'robot-docs', // Usually your repo name.
-  deploymentBranch: 'main',
+  organizationName: "raillab", // Usually your GitHub org/user name.
+  projectName: "robot-docs", // Usually your repo name.
+  deploymentBranch: "main",
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
+
+  plugins: [path.resolve(__dirname, "src/plugins/webpack-yaml-loader")],
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/raillab/robot-docs/blob/main',
+          editUrl: "https://github.com/raillab/robot-docs/blob/main",
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/raillab/robot-docs/blob/main',
+          editUrl: "https://github.com/raillab/robot-docs/blob/main",
           // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -81,63 +82,63 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/RAIL_Lab_logo.png',
+      image: "img/RAIL_Lab_logo.png",
       navbar: {
-        title: 'RAIL Lab',
+        title: "RAIL Lab",
         logo: {
-          alt: 'RAIL Lab Logo',
-          src: 'img/RAIL_Lab_logo.png',
+          alt: "RAIL Lab Logo",
+          src: "img/RAIL_Lab_logo.png",
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'robotsSidebar',
-            position: 'left',
-            label: 'Robots',
+            type: "docSidebar",
+            sidebarId: "robotsSidebar",
+            position: "left",
+            label: "Robots",
           },
-          {to: '/blog', label: 'News', position: 'left'},
+          { to: "/blog", label: "News", position: "left" },
           {
-            href: 'https://github.com/raillab',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/raillab",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Robots',
-                to: '/docs/welcome',
+                label: "Robots",
+                to: "/docs/welcome",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'RAIL Lab',
-                href: 'https://www.raillab.org/',
+                label: "RAIL Lab",
+                href: "https://www.raillab.org/",
               },
               {
-                label: 'X',
-                href: 'https://x.com/raillabwits',
+                label: "X",
+                href: "https://x.com/raillabwits",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/raillab',
+                label: "GitHub",
+                href: "https://github.com/raillab",
               },
               {
-                label: 'Dockerhub',
-                href: 'https://hub.docker.com/u/raillabwits',
+                label: "Dockerhub",
+                href: "https://hub.docker.com/u/raillabwits",
               },
             ],
           },
