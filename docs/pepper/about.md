@@ -3,6 +3,7 @@ id: pepper-about
 title: About
 description: Learn about the Pepper robot.
 sidebar_position: 1
+authors: [alexandrab]
 ---
 
 # 🤖 Meet Pepper – The Friendly Humanoid

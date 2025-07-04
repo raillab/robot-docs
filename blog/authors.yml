@@ -1,15 +1,4 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
-  socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
-
+# Sample of Possible Fields:
 slorber:
   name: Sébastien Lorber
   title: Docusaurus maintainer
@@ -23,3 +12,19 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+brandeni:
+  name: Branden Ingram
+  title: Lecturer at the University of the Witwatersrand
+  image_url: https://avatars.githubusercontent.com/u/13521590
+  socials:
+    github: brandeningram
+
+
+alexandrab:
+  name: Alexandra Barry
+  title: Masters Student in Robotics
+  image_url: https://avatars.githubusercontent.com/u/38378967
+  socials:
+    linkedin: alexandra-may-barry
+    github: AllyBarry
