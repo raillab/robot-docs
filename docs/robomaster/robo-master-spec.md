@@ -1,1 +1,0 @@
-https://www.dji.com/global/support/product/robomaster-s1
