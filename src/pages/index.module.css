@@ -216,7 +216,7 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .96) 100%);
 }
 
-:global(.theme-dark) .statsWrap {
+[data-theme='dark']:root .statsWrap {
   background: linear-gradient(180deg, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .2) 100%);
 }
 
