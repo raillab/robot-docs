@@ -21,7 +21,7 @@ The **A1** is a dynamic, high-performance quadruped robot from **Unitree Robotic
 - **Joints**: 12 motors with up to 33.5 N·m torque  
 - **Onboard Computation**: ARM Cortex A72 and optional NVIDIA TX2  
 - **OS/SDK**: Runs Ubuntu, ROS, and Unitree SDKs  
-- **Sensors**: Depth camera, foot-end force sensors, optional LiDAR  
+- **Sensors**: Depth camera, RGB camera, foot-end force sensors, optional LiDAR  
 - **Battery Life**: Around 1–2.5 hours depending on usage
 
 ---
@@ -29,7 +29,7 @@ The **A1** is a dynamic, high-performance quadruped robot from **Unitree Robotic
 ## ⚙️ Why A1 Rocks
 
 - **Fast and agile**: Performs jogging, dynamic running, and recovery maneuvers
-- **Terrain-ready**: Excellent balance and real-time joint control for uneven ground
+
 - **Open development platform**: Supports ROS and C++ SDKs for full control
 - **Expandable**: Mount cameras, LiDARs, or robotic arms for advanced tasks
 
@@ -42,6 +42,12 @@ The **A1** is a dynamic, high-performance quadruped robot from **Unitree Robotic
 - [💻 Unitree Robotics GitHub](https://github.com/unitreerobotics)
 - [📄 ArduSLAM on A1 – Research Paper](https://arxiv.org/abs/2211.14432)
 - [🗣️ Voice-Interacting A1 as a Guide Robot](https://arxiv.org/abs/2111.03718)
+- [📕 Full A1 User Manual (PDF)](https://www.mybotshop.de/Datasheet/Unitree_A1_User_Manual_v1.0.pdf)
+- [🌐 Computer & Networking Details (architecture)](https://www.yuque.com/ironfatty/nly1un/soiqt8)
+- [🧩 Unitree Legged SDK v3.2 (joint-level UDP control)](https://github.com/unitreerobotics/unitree_legged_sdk/releases/tag/v3.2)
+- [🤖 unitree_ros_to_real v3.2.1 (ROS interface to SDK)](https://github.com/unitreerobotics/unitree_ros_to_real/releases/tag/v3.2.1)
+- [🧪 Gazebo Simulation + ROS: a1_sim_py](https://github.com/lnotspotl/a1_sim_py/tree/a3a65384d88414ab30a155c8baa71f1106c3d436)
+- [🏋️ RL Training in Raisim: rl_locomotion](https://github.com/antonilo/rl_locomotion?tab=readme-ov-file)
 
 ---
 
