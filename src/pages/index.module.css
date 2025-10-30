@@ -1,23 +1,259 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+:root {
+  --rail-bg: radial-gradient(1200px 600px at 10% 10%, rgba(0, 188, 212, 0.15), transparent 70%),
+             radial-gradient(1000px 500px at 90% 20%, rgba(26, 35, 126, 0.15), transparent 70%),
+             linear-gradient(135deg, #1e3823 0%, #43926d 50%, #65d895 100%);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--rail-bg);
+  color: white;
+}
+
+.heroInner {
+  padding: 5rem 0 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.pillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.pill {
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .2);
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  backdrop-filter: blur(6px);
+}
+
+.heroTitle {
+  font-size: clamp(2.2rem, 4vw + .5rem, 4rem);
+  margin: .25rem 0 .5rem;
+  text-align: center;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  opacity: .95;
+  text-align: center;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.25rem;
+  justify-content: center;
+}
+
+.cta {
+  text-transform: none;
+}
+
+.heroMarquee {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  opacity: .9;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+}
+
+.heroMarquee span {
+  display: inline-block;
+  padding-right: 2rem;
+  animation: marquee 18s linear infinite;
+}
+
+.heroMarquee span:nth-child(2) {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
   }
 }
 
-.buttons {
+.section {
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: .5rem;
+  font-size: 1.8rem;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 60ch;
+  opacity: .8;
+}
+
+/* Robots grid */
+.robotsGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.robotCard {
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  padding: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.robotCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.robotEmoji {
+  font-size: 2rem;
+}
+
+.robotName {
+  margin-top: .5rem;
+  font-weight: 700;
+}
+
+/* Steps */
+.altSection {
+  background: linear-gradient(180deg, rgba(13, 71, 161, .03), transparent 50%);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.step {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+.stepNumber {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: var(--ifm-color-primary);
+  color: white;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.inlineLink {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Callouts */
+.callouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.callout {
+  background: linear-gradient(180deg, rgba(38, 198, 218, .10), rgba(92, 107, 192, .05));
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.callout:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.calloutEmoji {
+  font-size: 1.6rem;
+  margin-bottom: .25rem;
+}
+
+.calloutLink {
+  display: inline-block;
+  margin-top: .5rem;
+  font-weight: 700;
+}
+
+/* Stats */
+.statsWrap {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .96) 100%);
+}
+
+:global(.theme-dark) .statsWrap {
+  background: linear-gradient(180deg, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .2) 100%);
+}
+
+.stats {
   display: flex;
-  align-items: center;
+  gap: 2rem;
   justify-content: center;
+  padding: 2rem 0;
+  margin: 0;
+  list-style: none;
+}
+
+.stats li {
+  text-align: center;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.statLabel {
+  opacity: .7;
+}
+
+/* Footer CTA */
+.footerCta {
+  text-align: center;
+}
+
+/* Utilities */
+@media (max-width: 600px) {
+  .heroInner {
+    padding: 3.5rem 0 1rem;
+  }
+
+  .stats {
+    gap: 1rem;
+  }
 }
