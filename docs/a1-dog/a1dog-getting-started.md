@@ -3,6 +3,7 @@ id: a1dog-getting-started
 title: Getting Started
 description: Powering on, safe setup, and basic controls for the Unitree A1.
 sidebar_position: 2
+authors: [ibrahims]
 ---
 
 # 🚀 Getting Started with the Unitree A1

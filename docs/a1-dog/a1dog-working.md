@@ -3,6 +3,7 @@ id: a1dog-working
 title: Working on the Robot
 description: Network, onboard computers, ROS stack, and low-level control for the Unitree A1.
 sidebar_position: 3
+authors: [ibrahims]
 ---
 
 # 🛠️ Working with the A1 
@@ -16,7 +17,7 @@ This page is the hub for **hands-on work** with our lab’s A1: networking, onbo
 3) **Raspberry Pi (on-board PC)** — utilities/bridges/logging (`192.168.123.12`). **Rear body ports (towards tail) map to the Pi.**
 
 > **Architecture diagram - [source](https://www.yuque.com/ironfatty/nly1un/soiqt8)** 
-![A1 architecture](/static/img/A1_arch.png)
+![A1 architecture](/img/A1_arch.png)
 
 ---
 
