@@ -127,12 +127,12 @@ function Hero() {
           </div>
           <h1 className={styles.heroTitle}>RAIL Lab Robotics 🚀</h1>
           <p className={styles.heroSubtitle}>
-            From simulation to real-world deployments — humanoids, quadrupeds, UGVs and ROVs.
+            From simulation to real-world deployments - humanoids, quadrupeds, UGVs and ROVs.
           </p>
           <CTAButtons />
           <div className={styles.heroMarquee}>
-            <span>Pepper • Husky • Unitree A1 • BlueROV2 • Drones • Sim & Bench •</span>
-            <span aria-hidden> Pepper • Husky • Unitree A1 • BlueROV2 • Drones • Sim & Bench •</span>
+            <span>Pepper • Husky • Unitree A1 • BlueROV2 • Drones • Yumi • RoboMasters • TurtleBot •</span>
+            <span aria-hidden> Pepper • Husky • Unitree A1 • BlueROV2 • Drones • Yumi • RoboMasters • TurtleBot •</span>
           </div>
         </div>
       </div>
@@ -206,11 +206,11 @@ export default function Home() {
   return (
     <Layout
       title={`RAIL Lab | Robot Documentation`}
-      description="Explore the RAIL Lab robots — humanoids, quadrupeds, ground vehicles and submersibles">
+      description="Explore the RAIL Lab robots - humanoids, quadrupeds, ground vehicles and submersibles">
       <Head>
         {/* Social/OG tweaks */}
         <meta property="og:title" content="RAIL Lab | Robot Docs" />
-        <meta property="og:description" content="From simulation to the real world — learn, test, deploy." />
+        <meta property="og:description" content="From simulation to the real world - learn, test, deploy." />
       </Head>
       <Hero />
       <main>
