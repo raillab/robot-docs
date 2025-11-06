@@ -1,48 +1,91 @@
 ---
 id: drones-about
 title: About
-description: Learn about our drones.
+description: Overview of the multirotor drones used in the RAIL Lab.
 sidebar_position: 9
+keywords: [robotics, drones, UAV, quadcopter, autonomy, aerial robotics]
 ---
 
-# 🚜 Meet the Clearpath Husky – Rugged Mobility, Now with 360° LiDAR
+# ✈️ About Our Drones
 
-The **Husky** UGV from **Clearpath Robotics** is a rugged, all-terrain robotic base—perfect for research, mapping, and field deployments. Equipped with a Velodyne 3D LiDAR, it’s ready to navigate and perceive the world in full 3D.
+Our lab uses a range of **multirotor drones** (commonly quadcopters) for research in aerial autonomy, mapping, swarm coordination, and perception-driven navigation. These platforms offer high maneuverability, flexible sensor integration, and the ability to operate both indoors and outdoors with appropriate safety precautions.
 
----
-
-## 🌟 Key Details
-
-- **Manufacturer**: [Clearpath Robotics](https://clearpathrobotics.com)
-- **Model**: Husky UGV (A‑series: A200/A300)
-- **Dimensions**: 990×698×381 mm  
-- **Weight**: ~80 kg  
-- **Payload Capacity**: Up to 100 kg  
-- **Max Speed**: 2.0 m/s  
-- **Battery Runtime**: 8 h (standard), up to 24 h with upgrades  
-- **Chassis**: Aluminum, IP54 weather-resistant  
-- **Compute**: ROS 2 support out-of-the-box (e.g. Jazzy)  
-- **LiDAR Sensor**: Velodyne VLP‑16 “Puck” 3D LiDAR up to 200 m range
+Because drones operate in 3D space and require continuous closed-loop control, they serve as powerful tools for studying advanced robotics concepts — from flight dynamics and state estimation to multi-agent planning and communication-constrained coordination.
 
 ---
 
-## 🛠️ Why It’s a Lab Favorite
+## 🌟 Key Characteristics
 
-- **All-Terrain Robustness**: Handles rocky ground, mud, and slopes up to 30° with ease  
-- **High Payload**: Supports heavy sensors and manipulator arms for custom experiments  
-- **ROS-Ready**: Includes tutorials for mapping, SLAM, AMCL, Gmapping, and more  
-- **Full 3D Perception**: VLP‑16 enables 360° point clouds—great for obstacle avoidance, mapping, and visual odometry
-
----
-
-## 🔗 Must-Visit Resources
-
-- [📘 Official Husky Product Page](https://clearpathrobotics.com/husky-a300-unmanned-ground-vehicle-robot/)
-- [📑 Husky ROS Tutorials & Setup Guide](https://docs.clearpathrobotics.com/docs/ros1noetic/robots/solutions/husky_observer/user_manual_husky_observer)
-- [💻 Velodyne VLP‑16 Puck LiDAR Details](https://store.clearpathrobotics.com/products/ultra-puck)
-- [📄 Research: Husky + 3D LiDAR Integration](https://answers.ros.org/question/404561)
-- [📹 Blog: Fully-Loaded Autonomous Husky with Arm & LiDAR](https://clearpathrobotics.com/blog/2022/07/robot-spotlight-fully-loaded-autonomous-husky-ugv-with-robotic-arm/)
+| Feature | Description |
+|--------|-------------|
+| **Flight Type** | Multirotor (typically quadcopters), providing stable hover and agile maneuvering |
+| **Propulsion** | Brushless DC motors with ESC control for real-time thrust adjustment |
+| **State Estimation** | IMU + barometer onboard, with optional Vicon/OptiTrack motion capture indoors |
+| **Onboard Compute** | Companion computer (e.g., Jetson / Raspberry Pi) or flight controller firmware |
+| **Sensors** | Can include depth cameras, LiDAR, optical flow sensors, and downward-facing cameras |
+| **Software Stack** | Commonly uses **ROS**, **MAVROS**, and **PX4** or **ArduPilot** firmware |
+| **Safety** | Requires prop guards, controlled environment, and strict flight protocol |
 
 ---
 
-**TL;DR**: With its sturdy build, ROS-native support, and 360° LiDAR, the Husky is a versatile, field-ready platform. Ideal for outdoor mapping, autonomy experiments, sensor integration—and of course, fun robotics demos!
+## 🧱 System Architecture (Typical Setup)
+
+```
++------------------------------------------------+
+|         Onboard Companion Computer              |
+| (ROS, planning algorithms, perception models)   |
++------------------------------------------------+
+                     |
+                     | MAVLink (via serial or UDP)
+                     v
++------------------------------------------------+
+|         Flight Controller (PX4/ArduPilot)       |
+| (Low-level control, attitude stabilization)     |
++------------------------------------------------+
+                     |
+                     v
+     Motors/ESCs  +  IMU + Barometer + Sensors
+```
+
+The flight controller maintains stability and executes control loops, while the onboard computer handles high-level autonomy such as mapping, object detection, and navigation.
+
+---
+
+## 🚁 What You Can Do With Them
+
+- **Autonomous waypoint navigation**
+- **3D mapping and SLAM in indoor or GPS-denied environments**
+- **Reinforcement learning for control and obstacle avoidance**
+- **Vision-based landing and object tracking**
+- **Swarm / multi-drone coordination experiments**
+- **Communication-constrained planning and collaboration**
+
+---
+
+## 🧰 Relevant Software & Tools
+
+- PX4 Autopilot — https://px4.io/
+- MAVROS Package — http://wiki.ros.org/mavros
+- QGroundControl — https://qgroundcontrol.com/
+- ROS Flight Control Interfaces — http://wiki.ros.org/rosflight
+
+---
+
+## 🧑‍🔬 In Our Lab
+
+We use drones to explore:
+
+- Communication-efficient **multi-agent coordination**
+- Autonomous navigation in **GPS-denied** environments
+- Vision-based **target detection and tracking**
+- Safe reinforcement learning deployment strategies
+
+> Drones require **pre-flight inspection**, **clear environment**, and **strict safety procedures**.  
+> Please complete training and obtain flight approval before operation.
+
+---
+
+## 🤝 Contribute
+
+If you develop new flight procedures, perception nodes, or simulation environments, please add them here!  
+Clear documentation helps ensure **safe, reproducible, and collaborative** drone research. 💙

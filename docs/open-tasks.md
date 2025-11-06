@@ -2,7 +2,7 @@
 id: open-tasks
 title: Open Tasks and Upcoming Additions
 description: Tasks we need help with and upcoming documentation.
-sidebar_position: 9
+sidebar_position: 11
 ---
 
 ## 🧩 Open Tasks

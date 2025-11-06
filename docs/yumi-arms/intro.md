@@ -1,28 +1,37 @@
 ---
-id: drones-about
+id: yumi-overview
 title: About
-description: Learn about our drones.
+description: ABB IRB 14000 YuMi dual-arm collaborative robot overview for RAIL Lab documentation.
 sidebar_position: 9
 ---
 
-# 🚜 Meet the Clearpath Husky – Rugged Mobility, Now with 360° LiDAR
+# 🦾 Meet the YuMi Robot
 
-The **Husky** UGV from **Clearpath Robotics** is a rugged, all-terrain robotic base—perfect for research, mapping, and field deployments. Equipped with a Velodyne 3D LiDAR, it’s ready to navigate and perceive the world in full 3D.
+The **ABB IRB 14000 YuMi** is a dual-arm collaborative robot designed for small-part assembly, precision manipulation, and safe human-robot interaction.  
+At the RAIL Lab, YuMi is primarily used for research on manipulation, perception, robot learning, and interactive robotic systems.
 
 ---
 
 ## 🌟 Key Details
 
-- **Manufacturer**: [Clearpath Robotics](https://clearpathrobotics.com)
-- **Model**: Husky UGV (A‑series: A200/A300)
-- **Dimensions**: 990×698×381 mm  
-- **Weight**: ~80 kg  
-- **Payload Capacity**: Up to 100 kg  
-- **Max Speed**: 2.0 m/s  
-- **Battery Runtime**: 8 h (standard), up to 24 h with upgrades  
-- **Chassis**: Aluminum, IP54 weather-resistant  
-- **Compute**: ROS 2 support out-of-the-box (e.g. Jazzy)  
-- **LiDAR Sensor**: Velodyne VLP‑16 “Puck” 3D LiDAR up to 200 m range
+- **Manufacturer**: [ABB Robotics](https://new.abb.com/products/robotics)
+- **Model**: IRB 14000 **YuMi**
+- **Robot Type**: **Dual-arm collaborative robot (COBOT)** designed for safe human-robot interaction
+- **Degrees of Freedom**: **7 DOF per arm** (14 axes total)
+- **Payload**: ~**0.5 kg per arm**
+- **Reach**: ~**559 mm**
+- **Repeatability**: ~**±0.02 mm**
+- **Safety**: Intrinsically collaborative design, rounded geometry, limited force operation
+- **Controller**: **IRC5C** compact robotic controller (supports MultiMove & dual-arm coordination)
+- **Programming Interfaces**:
+  - **RAPID** (ABB native robot language)
+  - **ROS** support via `kth-ros-pkg/yumi`
+  - **Python control via Yumipy** (`galou/robotware6_06` fork)
+- **Network Interface**: Ethernet (Service Port **XP23**) for control & communication
+- **Operating Modes**:
+  - **Manual Mode** (slow/jog/teaching)
+  - **Auto Mode** (full-speed program execution, ~10× faster)
+- **Ideal Use Cases**: Precision assembly, manipulation research, vision-guided robotics
 
 ---
 
@@ -35,14 +44,22 @@ The **Husky** UGV from **Clearpath Robotics** is a rugged, all-terrain robotic b
 
 ---
 
-## 🔗 Must-Visit Resources
+## Useful Official Documentation
 
-- [📘 Official Husky Product Page](https://clearpathrobotics.com/husky-a300-unmanned-ground-vehicle-robot/)
-- [📑 Husky ROS Tutorials & Setup Guide](https://docs.clearpathrobotics.com/docs/ros1noetic/robots/solutions/husky_observer/user_manual_husky_observer)
-- [💻 Velodyne VLP‑16 Puck LiDAR Details](https://store.clearpathrobotics.com/products/ultra-puck)
-- [📄 Research: Husky + 3D LiDAR Integration](https://answers.ros.org/question/404561)
-- [📹 Blog: Fully-Loaded Autonomous Husky with Arm & LiDAR](https://clearpathrobotics.com/blog/2022/07/robot-spotlight-fully-loaded-autonomous-husky-ugv-with-robotic-arm/)
+| Name | Link |
+|------|------|
+| YuMi Product Page | https://new.abb.com/products/robotics/industrial-robots/irb-14000-yumi |
+| ABB Technical Library | https://library.abb.com/ |
+| RAPID Language Handbook | https://library.abb.com/ |
 
 ---
 
-**TL;DR**: With its sturdy build, ROS-native support, and 360° LiDAR, the Husky is a versatile, field-ready platform. Ideal for outdoor mapping, autonomy experiments, sensor integration—and of course, fun robotics demos!
+## Recent Research Using YuMi
+
+| Title | Year | Link |
+|-------|------|------|
+| Redundancy Parameterization of the YuMi Arm | 2025 | https://arxiv.org/abs/2505.23111 |
+| Real-Time Failure Handling w/ Vision-Language Models | 2025 | https://arxiv.org/abs/2503.15202 |
+| Digital Twin for Human-Robot Interaction | 2025 | https://www.researchgate.net/publication/381909584 |
+
+---
