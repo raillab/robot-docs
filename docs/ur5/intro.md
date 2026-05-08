@@ -85,31 +85,26 @@ python gripper_bridge.py
 
 If this file is missing, you can copy the script in this directory.
 
-Once that is running, you can run the hand-e driver on the remote PC:
+Once that is running, you can open a socat bridge on the remote PC:
 
 ``` bash
-ros2 launch robotiq_hande_driver gripper_controller_preview.launch.py \
-  use_fake_hardware:=false \
-  create_socat_tty:=true \
-  tty_port:=/tmp/ttyUR \
-  socat_ip_address:=10.10.187.168 \
-  socat_port:=54322 \
-  frequency_hz:=10 \
-  launch_rviz:=true
+socat -d -d pty,link=/tmp/ttyUR,raw,echo=0 tcp:10.10.187.168:54322
+```
+
+Once that is done, you can launch the hand-e action server (see scripts):
+
+``` bash
+ros2 run ur5_test hand_e_server.py 
 ```
 
 If all is well, you can now send commands to the gripper in ROS. For example, closing the gripper:
 
 ``` bash
-ros2 action send_goal /gripper_action_controller/gripper_cmd control_msgs/action/ParallelGripperCommand "command:
-  header:
-    stamp:
-      sec: 0
-      nanosec: 0
-    frame_id: ''
-  name: []
-  position: [0.0]
-  velocity: []
-  effort: [0]
-"
+ros2 action send_goal /gripper_action_controller/gripper_cmd control_msgs/action/GripperCommand "{command: {position: 0.0}}"
+```
+
+Or opening it:
+
+``` bash
+ros2 action send_goal /gripper_action_controller/gripper_cmd control_msgs/action/GripperCommand "{command: {position: 0.025}}"
 ```
